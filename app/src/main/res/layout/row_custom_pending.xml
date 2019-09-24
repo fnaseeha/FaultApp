@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_google_signin_btn_text_dark_disabled">
+
+        <ImageView
+            android:id="@+id/accped_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@android:drawable/checkbox_on_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/accped_icon"
+            android:text="ACCEPT"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/ItemCode"
+            android:layout_width="226dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:text="0115680592"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ItemCode"
+            android:layout_alignStart="@+id/ItemCode"
+            android:text="SAME"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="11dp"
+            android:text="9/17/2018 2:12:06 PM"
+            android:textAlignment="textEnd"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_esn_imei"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDesc"
+            android:layout_alignStart="@+id/ItemCode"
+            android:layout_marginStart="0dp"
+            android:text="MULLERIYAWA"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/RequestType"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvType"
+            android:layout_alignStart="@+id/tvType"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="4dp"
+            android:text="CDMA"
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/seq_no"
+            android:layout_width="30dp"
+            android:layout_height="81dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:text="051"
+            android:textAllCaps="true"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/CustomerRatings"
+            android:layout_width="141dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RequestType"
+            android:layout_alignStart="@+id/ItemCode"
+            android:layout_marginStart="209dp"
+            android:layout_marginTop="2dp"
+            android:text="RSBRZ"
+            android:textAlignment="textEnd"
+            android:textColor="@color/red_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:background="@android:color/white"
+        >
+
+        <TextView
+            android:id="@+id/ItemCode"
+            android:layout_width="226dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:text="0115680592"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ItemCode"
+            android:layout_alignStart="@+id/ItemCode"
+            android:text="SAME"
+            android:textAllCaps="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="138dp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp"
+            android:fontFamily="sans-serif"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+
+            android:text="Units :05"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_esn_imei"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDesc"
+            android:layout_alignStart="@+id/ItemCode"
+            android:layout_marginStart="0dp"
+            android:text="MULLERIYAWA"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/seq_no"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:text="051"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,172 @@
+package com.lk.lankabell.fault.model;
+
+public class MaterialIssued {
+
+    private String MATERIAL_ISSUED_ID;
+    private String MATERIAL_ISSUED_PIM_ID;
+
+    public String getMATERIAL_ISSUED_PIM_ID() {
+        return MATERIAL_ISSUED_PIM_ID;
+    }
+
+    public void setMATERIAL_ISSUED_PIM_ID(String MATERIAL_ISSUED_PIM_ID) {
+        this.MATERIAL_ISSUED_PIM_ID = MATERIAL_ISSUED_PIM_ID;
+    }
+
+    private String MATERIAL_ISSUED_REQUESTED_ID;
+    private String MATERIAL_ISSUED_ISSUE_NO;
+    private String MATERIAL_ISSUED_GIVEN_IMEI_ESN;
+    private String MATERIAL_ISSUED_RETURN_IMEI_ESN;
+    private String MATERIAL_ISSUED_ENTERED_RETURN_IMEI_ESN;
+    private String MATERIAL_ISSUED_RETURN_STATUS;
+    private String MATERIAL_ISSUED_TYPE;
+    private String MATERIAL_ISSUED_DATE;
+    private String MATERIAL_ISSUED_IS_SYNC;
+    private String MATERIAL_ISSUED_ITEM_NO;
+    private String MATERIAL_ISSUED_IS_ASR;
+    private String MATERIAL_ISSUED_IS_RETURN;
+    private String MATERIAL_ISSUED_TYPE_OTHER;
+    private String MATERIAL_ISSUED_EXISTING_ITEM_CODE;
+
+    public String getMATERIAL_ISSUED_EXISTING_ITEM_CODE() {
+        return MATERIAL_ISSUED_EXISTING_ITEM_CODE;
+    }
+
+    public void setMATERIAL_ISSUED_EXISTING_ITEM_CODE(String MATERIAL_ISSUED_EXISTING_ITEM_CODE) {
+        this.MATERIAL_ISSUED_EXISTING_ITEM_CODE = MATERIAL_ISSUED_EXISTING_ITEM_CODE;
+    }
+
+    public String getMATERIAL_ISSUED_IS_ASR() {
+        return MATERIAL_ISSUED_IS_ASR;
+    }
+
+    public void setMATERIAL_ISSUED_IS_ASR(String MATERIAL_ISSUED_IS_ASR) {
+        this.MATERIAL_ISSUED_IS_ASR = MATERIAL_ISSUED_IS_ASR;
+    }
+
+    public String getMATERIAL_ISSUED_TYPE() {
+        return MATERIAL_ISSUED_TYPE;
+    }
+
+    public void setMATERIAL_ISSUED_TYPE(String MATERIAL_ISSUED_TYPE) {
+        this.MATERIAL_ISSUED_TYPE = MATERIAL_ISSUED_TYPE;
+    }
+
+    public String getMATERIAL_ISSUED_ITEM_NO() {
+        return MATERIAL_ISSUED_ITEM_NO;
+    }
+
+    public void setMATERIAL_ISSUED_ITEM_NO(String MATERIAL_ISSUED_ITEM_NO) {
+        this.MATERIAL_ISSUED_ITEM_NO = MATERIAL_ISSUED_ITEM_NO;
+    }
+
+    public String getMATERIAL_ISSUED_ID() {
+        return MATERIAL_ISSUED_ID;
+    }
+
+    public void setMATERIAL_ISSUED_ID(String MATERIAL_ISSUED_ID) {
+        this.MATERIAL_ISSUED_ID = MATERIAL_ISSUED_ID;
+    }
+
+    public String getMATERIAL_ISSUED_REQUESTED_ID() {
+        return MATERIAL_ISSUED_REQUESTED_ID;
+    }
+
+    public void setMATERIAL_ISSUED_REQUESTED_ID(String MATERIAL_ISSUED_REQUESTED_ID) {
+        this.MATERIAL_ISSUED_REQUESTED_ID = MATERIAL_ISSUED_REQUESTED_ID;
+    }
+
+    public String getMATERIAL_ISSUED_ISSUE_NO() {
+        return MATERIAL_ISSUED_ISSUE_NO;
+    }
+
+    public void setMATERIAL_ISSUED_ISSUE_NO(String MATERIAL_ISSUED_ISSUE_NO) {
+        this.MATERIAL_ISSUED_ISSUE_NO = MATERIAL_ISSUED_ISSUE_NO;
+    }
+
+    public String getMATERIAL_ISSUED_GIVEN_IMEI_ESN() {
+        return MATERIAL_ISSUED_GIVEN_IMEI_ESN;
+    }
+
+    public void setMATERIAL_ISSUED_GIVEN_IMEI_ESN(String MATERIAL_ISSUED_GIVEN_IMEI_ESN) {
+        this.MATERIAL_ISSUED_GIVEN_IMEI_ESN = MATERIAL_ISSUED_GIVEN_IMEI_ESN;
+    }
+
+    public String getMATERIAL_ISSUED_RETURN_IMEI_ESN() {
+        return MATERIAL_ISSUED_RETURN_IMEI_ESN;
+    }
+
+    public void setMATERIAL_ISSUED_RETURN_IMEI_ESN(String MATERIAL_ISSUED_RETURN_IMEI_ESN) {
+        this.MATERIAL_ISSUED_RETURN_IMEI_ESN = MATERIAL_ISSUED_RETURN_IMEI_ESN;
+    }
+
+    public String getMATERIAL_ISSUED_ENTERED_RETURN_IMEI_ESN() {
+        return MATERIAL_ISSUED_ENTERED_RETURN_IMEI_ESN;
+    }
+
+    public void setMATERIAL_ISSUED_ENTERED_RETURN_IMEI_ESN(String MATERIAL_ISSUED_ENTERED_RETURN_IMEI_ESN) {
+        this.MATERIAL_ISSUED_ENTERED_RETURN_IMEI_ESN = MATERIAL_ISSUED_ENTERED_RETURN_IMEI_ESN;
+    }
+
+    public String getMATERIAL_ISSUED_RETURN_STATUS() {
+        return MATERIAL_ISSUED_RETURN_STATUS;
+    }
+
+    public void setMATERIAL_ISSUED_RETURN_STATUS(String MATERIAL_ISSUED_RETURN_STATUS) {
+        this.MATERIAL_ISSUED_RETURN_STATUS = MATERIAL_ISSUED_RETURN_STATUS;
+    }
+
+    public String getMATERIAL_ISSUED_DATE() {
+        return MATERIAL_ISSUED_DATE;
+    }
+
+    public void setMATERIAL_ISSUED_DATE(String MATERIAL_ISSUED_DATE) {
+        this.MATERIAL_ISSUED_DATE = MATERIAL_ISSUED_DATE;
+    }
+
+    public String getMATERIAL_ISSUED_IS_SYNC() {
+        return MATERIAL_ISSUED_IS_SYNC;
+    }
+
+    public void setMATERIAL_ISSUED_IS_SYNC(String MATERIAL_ISSUED_IS_SYNC) {
+        this.MATERIAL_ISSUED_IS_SYNC = MATERIAL_ISSUED_IS_SYNC;
+    }
+
+    public String getMATERIAL_ISSUED_TYPE_OTHER() {
+        return MATERIAL_ISSUED_TYPE_OTHER;
+    }
+
+    public void setMATERIAL_ISSUED_TYPE_OTHER(String MATERIAL_ISSUED_TYPE_OTHER) {
+        this.MATERIAL_ISSUED_TYPE_OTHER = MATERIAL_ISSUED_TYPE_OTHER;
+    }
+
+    public String getMATERIAL_ISSUED_IS_RETURN() {
+        return MATERIAL_ISSUED_IS_RETURN;
+    }
+
+    public void setMATERIAL_ISSUED_IS_RETURN(String MATERIAL_ISSUED_IS_RETURN) {
+        this.MATERIAL_ISSUED_IS_RETURN = MATERIAL_ISSUED_IS_RETURN;
+    }
+
+    @Override
+    public String toString() {
+        return "MaterialIssued{" +
+                "MATERIAL_ISSUED_ID='" + MATERIAL_ISSUED_ID + '\'' +
+                ", MATERIAL_ISSUED_PIM_ID='" + MATERIAL_ISSUED_PIM_ID + '\'' +
+                ", MATERIAL_ISSUED_REQUESTED_ID='" + MATERIAL_ISSUED_REQUESTED_ID + '\'' +
+                ", MATERIAL_ISSUED_ISSUE_NO='" + MATERIAL_ISSUED_ISSUE_NO + '\'' +
+                ", MATERIAL_ISSUED_GIVEN_IMEI_ESN='" + MATERIAL_ISSUED_GIVEN_IMEI_ESN + '\'' +
+                ", MATERIAL_ISSUED_RETURN_IMEI_ESN='" + MATERIAL_ISSUED_RETURN_IMEI_ESN + '\'' +
+                ", MATERIAL_ISSUED_ENTERED_RETURN_IMEI_ESN='" + MATERIAL_ISSUED_ENTERED_RETURN_IMEI_ESN + '\'' +
+                ", MATERIAL_ISSUED_RETURN_STATUS='" + MATERIAL_ISSUED_RETURN_STATUS + '\'' +
+                ", MATERIAL_ISSUED_TYPE='" + MATERIAL_ISSUED_TYPE + '\'' +
+                ", MATERIAL_ISSUED_DATE='" + MATERIAL_ISSUED_DATE + '\'' +
+                ", MATERIAL_ISSUED_IS_SYNC='" + MATERIAL_ISSUED_IS_SYNC + '\'' +
+                ", MATERIAL_ISSUED_ITEM_NO='" + MATERIAL_ISSUED_ITEM_NO + '\'' +
+                ", MATERIAL_ISSUED_IS_ASR='" + MATERIAL_ISSUED_IS_ASR + '\'' +
+                ", MATERIAL_ISSUED_IS_RETURN='" + MATERIAL_ISSUED_IS_RETURN + '\'' +
+                ", MATERIAL_ISSUED_TYPE_OTHER='" + MATERIAL_ISSUED_TYPE_OTHER + '\'' +
+                ", MATERIAL_ISSUED_EXISTING_ITEM_CODE='" + MATERIAL_ISSUED_EXISTING_ITEM_CODE + '\'' +
+                '}';
+    }
+}

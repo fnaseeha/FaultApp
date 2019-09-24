@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00241F</color>
+    <color name="colorPrimaryLight">#03473E</color>
+    <color name="colorAccent">#FF005D</color>
+
+    <color name="accent">#FFB300</color>
+    <color name="red">#e97373</color>
+    <color name="red_dark">#8D0000</color>
+    <color name="yellow">#EED45A</color>
+    <color name="yellow12">#edca22</color>
+    <color name="yellow123">#d2b31e</color>
+    <color name="yellow_dark1">#fc9d03</color>
+    <color name="yellow_dark">#b0b605</color>
+    <color name="lime">#3C4F03</color>
+    <color name="lime_dark">#344401</color>
+    <color name="blue">#3c0bc1</color>
+    <color name="blue_dark">#9550df</color>
+    <color name="blue_light">#37C4C6</color>
+    <color name="dark_violet">#7E50F1</color>
+    <color name="dark_violet_dark">#683dd4</color>
+    <color name="green_dark">#009404</color>
+    <color name="violet">#b33ec9</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="purple">#ef89e7</color>
+    <color name="grey">#ece8e8</color>
+    <color name="grey_dark">#6C6C6C</color>
+    <color name="red_light">#E40909</color>
+
+    <color name="menu_fragment_background">#B3000000</color>
+    <color name="menu_item_background">#f2f2f2</color>
+    <color name="divider_color">#b5b5b5</color>
+</resources>

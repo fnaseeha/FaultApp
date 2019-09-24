@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lid_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginStart="0dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/b4GLTE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="4G/LTE"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bCDMA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="CDMA"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bSIM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="SIM"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="OTHER"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="4dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginRight="4dp"
+        android:layout_height="wrap_content">
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            style="@style/MaterialSearchBarLight"
+            app:mt_speechMode="false"
+            app:mt_roundedSearchBarEnabled="true"
+            android:background="@drawable/round_corners"
+            android:layout_margin="6dp"
+            app:mt_hint="Search by"
+            app:mt_placeholder="Search By Serial"
+            app:mt_maxSuggestionsCount="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchBar" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:id="@+id/rvView"
+        tools:listitem="@layout/row_custom_sotck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

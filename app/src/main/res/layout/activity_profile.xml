@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/splashscreen"
+    android:layout_height="match_parent"
+    tools:context=".view.ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_background_primary_dark"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@drawable/rounded_background_primary_dark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/header_cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="fitXY" />
+
+
+
+            <ImageButton
+                android:id="@+id/user_profile_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/profile_circular_border_imageview"
+                android:elevation="5dp"
+                android:padding="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile" />
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_cover_image"
+                android:background="#ff0000"
+                android:visibility="gone"
+                android:elevation="4dp"
+                android:paddingBottom="24dp">
+
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/user_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="76dp"
+                    android:text="User Name"
+                    android:textColor="#fff"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:background="@color/colorPrimary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_layout"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:layout_margin="3dp"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:padding="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="0.7"
+                        android:src="@drawable/ic_emp_no"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="3dp"
+                        android:text="Epf No"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_my_profile_epf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="1dp"
+                        android:text="N/A"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="RtlCompat"
+                        android:textAlignment="textEnd"
+                        android:layout_marginRight="0dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:layout_margin="3dp"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:padding="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="0.6"
+                        android:src="@drawable/ic_sim_card"
+                        />
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="3dp"
+                        android:text="Sim No "
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_my_profile_sim_no"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:textAlignment="textEnd"
+                        android:layout_weight="2"
+                        android:layout_marginRight="0dp"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="N/A"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="RtlCompat" />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:layout_margin="3dp"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:padding="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="0.7"
+                        android:src="@drawable/ic_app_version"
+                        />
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="3dp"
+                        android:text="App Version"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_my_profile_app_version"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="1.0"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="RtlCompat"
+                        android:textAlignment="textEnd"
+                        android:layout_marginRight="0dp"/>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

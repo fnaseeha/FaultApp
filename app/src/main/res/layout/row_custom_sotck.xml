@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:padding="@dimen/_5sdp">
+
+
+
+        <TextView
+            android:id="@+id/tvSerial"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:text="0B3C5003"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSerial"
+            android:layout_alignStart="@+id/tvSerial"
+            android:layout_marginEnd="74dp"
+            android:layout_toStartOf="@+id/btnCheck"
+            android:text="ZTE WP826A"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12sdp" />
+
+
+        <TextView
+            android:id="@+id/ItemCode"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDesc"
+            android:layout_alignStart="@+id/tvSerial"
+            android:layout_marginEnd="74dp"
+            android:layout_toStartOf="@+id/btnCheck"
+            android:text="CDCUZT01000"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ItemCode"
+            android:layout_alignStart="@+id/tvSerial"
+            android:layout_marginEnd="74dp"
+            android:layout_toStartOf="@+id/btnCheck"
+            android:text="REFERBISH"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12sdp" />
+
+
+
+        <TextView
+            android:id="@+id/seq_no"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:gravity="center"
+            android:text="051"
+
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvQty"
+            android:layout_width="107dp"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@+id/desc1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/tvSerial"
+            android:text="Qty - 01"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp" />
+
+    </RelativeLayout>
+</LinearLayout>
