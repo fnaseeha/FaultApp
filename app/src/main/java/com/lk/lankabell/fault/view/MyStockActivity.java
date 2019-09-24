@@ -11,8 +11,6 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -58,14 +56,14 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
         searchBar.setOnSearchActionListener(this);
 
 
-        setRecyclerViewDate("LTEU","");
+        setRecyclerViewDate("LTEU",searchBar.getText());
         final Button b4GLTE = (Button) findViewById(R.id.b4GLTE);
         final Button bCDMA = (Button) findViewById(R.id.bCDMA);
         final Button bSIM = (Button) findViewById(R.id.bSIM);
         final Button bOther = (Button) findViewById(R.id.bOther);
 
 
-        Searching();
+        //Searching("LTEU");
 
         try {
             //sendStock.putExtra("type","OTHER");
@@ -80,7 +78,8 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
                     searchBar.setHint("CDHWCU010111");
                     searchBar.clearFocus();
                     recyclerView.getAdapter().notifyDataSetChanged();
-                    Searching();
+                    System.out.println("OnCreate Other");
+                    Searching("OTHER");
 
                     b4GLTE.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
                     bCDMA.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
@@ -95,7 +94,8 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
                     searchBar.setText("");
                     list.clear();
                     recyclerView.getAdapter().notifyDataSetChanged();
-                    Searching();
+                    System.out.println("OnCreate CDMA");
+                    Searching("CPHN");
 
                     b4GLTE.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
                     bCDMA.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
@@ -110,7 +110,8 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
                     searchBar.setHint("413040116074476");
                     list.clear();
                     recyclerView.getAdapter().notifyDataSetChanged();
-                    Searching();
+                    System.out.println("OnCreate SIM");
+                    Searching("LTES");
 
                     b4GLTE.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
                     bCDMA.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
@@ -125,8 +126,8 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
                     searchBar.setHint("866855027643758");
                     list.clear();
                     recyclerView.getAdapter().notifyDataSetChanged();
-                    Searching();
-
+                    Searching("LTEU");
+                    System.out.println("OnCreate LTE");
                     b4GLTE.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                     bCDMA.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
                     bSIM.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
@@ -151,8 +152,9 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
                 list.clear();
                 searchBar.clearFocus();
                 recyclerView.getAdapter().notifyDataSetChanged();
-                Searching();
+                Searching("LTEU");
 
+                System.out.println("serch text "+searchBar.getText());
                 b4GLTE.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 bCDMA.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
                 bSIM.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
@@ -174,7 +176,7 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
                 // Clear collection..
                 list.clear();
                 recyclerView.getAdapter().notifyDataSetChanged();
-                Searching();
+                Searching("CPHN");
 
                 b4GLTE.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
                 bCDMA.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
@@ -196,7 +198,7 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
                 searchBar.setText("");
                 list.clear();
                 recyclerView.getAdapter().notifyDataSetChanged();
-                Searching();
+                Searching("LTES");
 
                 b4GLTE.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
                 bCDMA.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
@@ -217,7 +219,7 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
                 searchBar.setText("");
                 list.clear();
                 recyclerView.getAdapter().notifyDataSetChanged();
-                Searching();
+                Searching("OTHER");
 
                 b4GLTE.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
                 bCDMA.setBackgroundColor(getResources().getColor(R.color.common_google_signin_btn_text_light_default));
@@ -229,7 +231,7 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
         });
     }
 
-    private void Searching() {
+    private void Searching(final String type) {
         searchBar.addTextChangeListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -239,8 +241,9 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                System.out.println("* searching onchange ... "+s.toString());
+                System.out.println("* searching onchange ... "+s.toString()+" type "+type);
                 searchText = s.toString();
+                setRecyclerViewDate(type,searchText);
             }
 
             @Override
@@ -253,7 +256,7 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
 
     private  void setRecyclerViewDate(final String type,String searchtext){
 
-        System.out.println("* searchtext "+searchtext);
+        System.out.println("* searchtext "+searchtext+" type "+type);
         if(searchtext.equals("")){
             list = new PendingIssuedMaterialDAO(this).getAllAcceptedMaterial(type);
         }else{
@@ -296,7 +299,7 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
     @Override
     public void onSearchStateChanged(boolean enabled) {
         String s = enabled ? "enabled" : "disabled";
-        Toast.makeText(MyStockActivity.this, "Search " + s, Toast.LENGTH_SHORT).show();
+     //   Toast.makeText(MyStockActivity.this, "Search " + s, Toast.LENGTH_SHORT).show();
     }
 
     @Override

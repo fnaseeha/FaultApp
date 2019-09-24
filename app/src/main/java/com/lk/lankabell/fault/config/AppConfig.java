@@ -8,10 +8,10 @@ public class AppConfig {
 
     //-----------------API URL - PUBLIC IP ADDRESS-----------------
     //test
-   public static String IP = "http://119.235.1.59:8090/";
+  // public static String IP = "http://119.235.1.59:8090/";
 
     //live
-   //public static String IP = "http://119.235.1.88:8096/";
+   public static String IP = "http://119.235.1.88:8096/";
     public static String path = IP+"Service1.svc/";
     public static String CorePath = "http://119.235.1.88:8091/Core.svc/";
 
