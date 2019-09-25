@@ -62,6 +62,7 @@ import com.lk.lankabell.fault.model.IssuedMaterialDetails;
 import com.lk.lankabell.fault.model.MaterialIssued;
 import com.lk.lankabell.fault.model.PendingFaults;
 import com.lk.lankabell.fault.service.SyncData;
+import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -88,6 +89,7 @@ public class MaterialRequestActivity extends AppCompatActivity implements Volley
     String phone_number;
     SweetAlertDialog pDialog;
     SpinnerDialog spinnerDialog, spinnerBiDialog;
+    private MaterialSearchBar searchBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,12 +104,13 @@ public class MaterialRequestActivity extends AppCompatActivity implements Volley
         recyclerView = (RecyclerView) findViewById(R.id.rvView);
         phone_number = AppContoller.getPhoneNumber(MaterialRequestActivity.this);
         setRecyclerViewDate("LTEU");
+        searchBar = (MaterialSearchBar) findViewById(R.id.searchBar);
 
         b4GLTE = (Button) findViewById(R.id.b4GLTE);
         bCDMA = (Button) findViewById(R.id.bCDMA);
         bSIM = (Button) findViewById(R.id.bSIM);
         bOther = (Button) findViewById(R.id.bOther);
-
+        searchBar.setVisibility(View.GONE);
         AskSmsPermission();
         new SyncData(MaterialRequestActivity.this).itemIssueValidation(MaterialRequestActivity.this, TaskType.IS_4GLTE_VALIDATION_NEW, fault.getPF_REQUESTID(), "LTE");
 

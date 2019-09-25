@@ -1,6 +1,7 @@
 package com.lk.lankabell.fault.adapter;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -93,6 +94,7 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyViewHo
 
         if(materialDetails.getSerial().equals(null) || materialDetails.getSerial().equalsIgnoreCase("null")){
             holder.tvSerial.setVisibility(View.INVISIBLE);
+            holder.tvItemCode.setTypeface(null, Typeface.BOLD);
         }else{
             holder.tvSerial.setVisibility(View.VISIBLE);
         }

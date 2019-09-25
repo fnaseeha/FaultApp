@@ -1,6 +1,7 @@
 package com.lk.lankabell.fault.view;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MyStockActivity extends AppCompatActivity implements MaterialSearchBar.OnSearchActionListener {
 
@@ -44,8 +46,12 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_material_request_details);
         //getSupportActionBar().setTitle("MY STOCK - ( NEW , REFURBISH )");
-        getSupportActionBar().setTitle(Html.fromHtml("<small>MY STOCK -( NEW , REFURBISH )</small>"));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Objects.requireNonNull(getSupportActionBar()).setTitle(Html.fromHtml("<small>MY STOCK -( NEW , REFURBISH )</small>"));
+            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        }
+
         //coordinator_layout
         coordinatorLayout = findViewById(R.id.coordinator_layout);
         //Pending Faults - Lists code
@@ -56,14 +62,14 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
         searchBar.setOnSearchActionListener(this);
 
 
-        setRecyclerViewDate("LTEU",searchBar.getText());
+        setRecyclerViewDate("LTEU","");
         final Button b4GLTE = (Button) findViewById(R.id.b4GLTE);
         final Button bCDMA = (Button) findViewById(R.id.bCDMA);
         final Button bSIM = (Button) findViewById(R.id.bSIM);
         final Button bOther = (Button) findViewById(R.id.bOther);
 
 
-        //Searching("LTEU");
+        Searching("LTEU");
 
         try {
             //sendStock.putExtra("type","OTHER");
@@ -270,7 +276,7 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
+        // recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(mrDetailsAdapter);
         recyclerView.setNestedScrollingEnabled(false);
         //set Data and refrese adapter
@@ -299,7 +305,7 @@ public class MyStockActivity extends AppCompatActivity implements MaterialSearch
     @Override
     public void onSearchStateChanged(boolean enabled) {
         String s = enabled ? "enabled" : "disabled";
-     //   Toast.makeText(MyStockActivity.this, "Search " + s, Toast.LENGTH_SHORT).show();
+        //   Toast.makeText(MyStockActivity.this, "Search " + s, Toast.LENGTH_SHORT).show();
     }
 
     @Override
